@@ -53,12 +53,18 @@
 // Included Files
 //
 #include "DSP28x_Project.h"     // Device Headerfile and Examples Include File
-
+#include "Boot.h"
+#include "Flash2806x_API_Library.h"
+#ifndef NULL
+#define NULL 0
+#endif
+extern Uint32 Flash_CPUScaleFactor;
+extern void (*Flash_CallbackPtr) (void);
 //
 // Globals
 //
 extern Uint32 CAN_Boot();
-
+extern FLASH_ST FlashStatus;
 //
 // Function Prototypes
 //
@@ -78,6 +84,24 @@ Uint32 main(void)
     InitPll(DSP28_PLLCR,DSP28_DIVSEL);
 
     DELAY_US(100);
+
+    CsmUnlock();
+    Uint16 status2;
+    EALLOW;
+    Flash_CPUScaleFactor = SCALE_FACTOR;
+    Flash_CallbackPtr = NULL;
+    EDIS;
+
+    status2 = Flash_Erase((SECTORA | SECTORB | SECTORC | SECTORD|SECTORE | SECTORF | SECTORG | SECTORH),
+                         &FlashStatus);
+    if(status2 != STATUS_SUCCESS)
+    {
+        //
+        // Return
+        //
+        return;
+    }
+
     return CAN_Boot();
 }
 
