@@ -113,22 +113,22 @@ CopyData(void)
     //
     // Make sure code security is disabled
     //
-//    CsmUnlock();
-//
-//    EALLOW;
-//    Flash_CPUScaleFactor = SCALE_FACTOR;
-//    Flash_CallbackPtr = NULL;
-//    EDIS;
-//
-//    status = Flash_Erase((SECTORA | SECTORB | SECTORC | SECTORD|SECTORE | SECTORF | SECTORG | SECTORH),
-//                         &FlashStatus);
-//    if(status != STATUS_SUCCESS)
-//    {
-//        //
-//        // Return
-//        //
-//        return;
-//    }
+    CsmUnlock();
+
+    EALLOW;
+    Flash_CPUScaleFactor = SCALE_FACTOR;
+    Flash_CallbackPtr = NULL;
+    EDIS;
+
+    status = Flash_Erase((SECTORA | SECTORB | SECTORC | SECTORD|SECTORE | SECTORF | SECTORG | SECTORH),
+                         &FlashStatus);
+    if(status != STATUS_SUCCESS)
+    {
+        //
+        // Return
+        //
+        return;
+    }
 
     //
     // Get the size in words of the first block

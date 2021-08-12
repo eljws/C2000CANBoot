@@ -7,7 +7,7 @@ SHELL = cmd.exe
 # Add inputs and outputs from these tool invocations to the build variables 
 CMD_SRCS += \
 ../28069_RAM_lnk.cmd \
-C:/ti/c2000/C2000Ware_3_03_00_00/device_support/f2806x/headers/cmd/F2806x_Headers_nonBIOS.cmd 
+C:/ti/c2000/C2000Ware_3_02_00_00/device_support/f2806x/headers/cmd/F2806x_Headers_nonBIOS.cmd 
 
 LIB_SRCS += \
 ../2806x_BootROM_API_TABLE_Symbols.lib \
@@ -16,12 +16,12 @@ LIB_SRCS += \
 ASM_SRCS += \
 ../Exit_Boot.asm \
 ../F2806x_CodeStartBranch.asm \
-C:/ti/c2000/C2000Ware_3_03_00_00/device_support/f2806x/common/source/F2806x_usDelay.asm 
+C:/ti/c2000/C2000Ware_3_02_00_00/device_support/f2806x/common/source/F2806x_usDelay.asm 
 
 C_SRCS += \
 ../CAN_Boot.c \
-C:/ti/c2000/C2000Ware_3_03_00_00/device_support/f2806x/headers/source/F2806x_GlobalVariableDefs.c \
-C:/ti/c2000/C2000Ware_3_03_00_00/device_support/f2806x/common/source/F2806x_SysCtrl.c \
+C:/ti/c2000/C2000Ware_3_02_00_00/device_support/f2806x/headers/source/F2806x_GlobalVariableDefs.c \
+C:/ti/c2000/C2000Ware_3_02_00_00/device_support/f2806x/common/source/F2806x_SysCtrl.c \
 ../Shared_Boot.c \
 ../main.c 
 
@@ -71,14 +71,14 @@ ASM_DEPS__QUOTED += \
 
 C_SRCS__QUOTED += \
 "../CAN_Boot.c" \
-"C:/ti/c2000/C2000Ware_3_03_00_00/device_support/f2806x/headers/source/F2806x_GlobalVariableDefs.c" \
-"C:/ti/c2000/C2000Ware_3_03_00_00/device_support/f2806x/common/source/F2806x_SysCtrl.c" \
+"C:/ti/c2000/C2000Ware_3_02_00_00/device_support/f2806x/headers/source/F2806x_GlobalVariableDefs.c" \
+"C:/ti/c2000/C2000Ware_3_02_00_00/device_support/f2806x/common/source/F2806x_SysCtrl.c" \
 "../Shared_Boot.c" \
 "../main.c" 
 
 ASM_SRCS__QUOTED += \
 "../Exit_Boot.asm" \
 "../F2806x_CodeStartBranch.asm" \
-"C:/ti/c2000/C2000Ware_3_03_00_00/device_support/f2806x/common/source/F2806x_usDelay.asm" 
+"C:/ti/c2000/C2000Ware_3_02_00_00/device_support/f2806x/common/source/F2806x_usDelay.asm" 
 
 

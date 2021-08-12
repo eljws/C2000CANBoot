@@ -4,7 +4,7 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := C:/PROGRA~3/MATLAB/SUPPOR~1/R2019a/3P778C~1.INS/TIC200~1.INS/ti-cgt-c2000_16.9.9.LTS
+CG_TOOL_ROOT := C:/PROGRA~3/MATLAB/SUPPOR~1/R2021a/3P778C~1.INS/TIC200~1.INS/ti-cgt-c2000_20.2.1.LTS
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
@@ -13,7 +13,7 @@ ORDERED_OBJS += \
 "../2806x_BootROM_API_TABLE_Symbols_fpu32.lib" \
 "../2806x_BootROM_API_TABLE_Symbols.lib" \
 "../28069_RAM_lnk.cmd" \
-"C:/ti/c2000/C2000Ware_3_03_00_00/device_support/f2806x/headers/cmd/F2806x_Headers_nonBIOS.cmd" \
+"C:/ti/c2000/C2000Ware_3_02_00_00/device_support/f2806x/headers/cmd/F2806x_Headers_nonBIOS.cmd" \
 "./CAN_Boot.obj" \
 "./Exit_Boot.obj" \
 "./F2806x_CodeStartBranch.obj" \
@@ -150,7 +150,7 @@ all: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 f28069_can_flash_kernel.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"C:/PROGRA~3/MATLAB/SUPPOR~1/R2019a/3P778C~1.INS/TIC200~1.INS/ti-cgt-c2000_16.9.9.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla0 --float_support=fpu32 --vcu_support=vcu0 -g --diag_warning=225 --diag_wrap=off --display_error_number -z -m"f28069_can_flash_kernel.map" --stack_size=0x300 --warn_sections -i"C:/PROGRA~3/MATLAB/SUPPOR~1/R2019a/3P778C~1.INS/TIC200~1.INS/ti-cgt-c2000_16.9.9.LTS/lib" -i"C:/PROGRA~3/MATLAB/SUPPOR~1/R2019a/3P778C~1.INS/TIC200~1.INS/ti-cgt-c2000_16.9.9.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="f28069_can_flash_kernel_linkInfo.xml" --entry_point=_InitBoot --rom_model -o "f28069_can_flash_kernel.out" $(ORDERED_OBJS)
+	"C:/PROGRA~3/MATLAB/SUPPOR~1/R2021a/3P778C~1.INS/TIC200~1.INS/ti-cgt-c2000_20.2.1.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla0 --float_support=fpu32 --vcu_support=vcu0 -g --diag_warning=225 --diag_wrap=off --display_error_number -z -m"f28069_can_flash_kernel.map" --stack_size=0x300 --warn_sections -i"C:/PROGRA~3/MATLAB/SUPPOR~1/R2021a/3P778C~1.INS/TIC200~1.INS/ti-cgt-c2000_20.2.1.LTS/lib" -i"C:/PROGRA~3/MATLAB/SUPPOR~1/R2021a/3P778C~1.INS/TIC200~1.INS/ti-cgt-c2000_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="f28069_can_flash_kernel_linkInfo.xml" --entry_point=_InitBoot --rom_model -o "f28069_can_flash_kernel.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 	@$(MAKE) --no-print-directory post-build
@@ -158,7 +158,7 @@ f28069_can_flash_kernel.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 f28069_can_flash_kernel.txt: $(EXE_OUTPUTS)
 	@echo 'Building files: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo 'Invoking: C2000 Hex Utility'
-	"C:/PROGRA~3/MATLAB/SUPPOR~1/R2019a/3P778C~1.INS/TIC200~1.INS/ti-cgt-c2000_16.9.9.LTS/bin/hex2000"  -o "f28069_can_flash_kernel.txt" $(EXE_OUTPUTS__QUOTED)
+	"C:/PROGRA~3/MATLAB/SUPPOR~1/R2021a/3P778C~1.INS/TIC200~1.INS/ti-cgt-c2000_20.2.1.LTS/bin/hex2000" --diag_wrap=off -o "f28069_can_flash_kernel.txt" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo ' '
 	@$(MAKE) --no-print-directory post-build
@@ -173,7 +173,7 @@ clean:
 	-@echo ' '
 
 post-build:
-	-"C:/PROGRA~3/MATLAB/SUPPOR~1/R2019a/3P778C~1.INS/TIC200~1.INS/ti-cgt-c2000_16.9.9.LTS/bin/hex2000" "f28069_can_flash_kernel.out" -boot -sci8 -a -o "f28069_can_flash_kernel.txt"
+	-"C:/PROGRA~3/MATLAB/SUPPOR~1/R2021a/3P778C~1.INS/TIC200~1.INS/ti-cgt-c2000_20.2.1.LTS/bin/hex2000" "f28069_can_flash_kernel.out" -boot -sci8 -a -o "f28069_can_flash_kernel.txt"
 	-@echo ' '
 
 .PHONY: all clean dependents

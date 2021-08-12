@@ -49,7 +49,7 @@
 	<variableList>
 		<variable>
 			<name>INSTALLROOT_F2806x</name>
-			<value>file:/C:/ti/c2000/C2000Ware_3_03_00_00/device_support/f2806x</value>
+			<value>file:/C:/ti/c2000/C2000Ware_3_02_00_00/device_support/f2806x</value>
 		</variable>
 	</variableList>
 </projectDescription>
